@@ -49,7 +49,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\API\Outpost2Dialog;../../API/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>OP2MissionSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -57,6 +57,7 @@
       <BaseAddress>0x11000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>OP2MissionSDK\odasl\odasl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy $(TargetPath) ..\..\..\..\GameDownload\Outpost2\trunk\
@@ -73,7 +74,7 @@ rem copy /Y "$(ProjectDir)multitekNoLavaWalls.txt" "..\..\..\..\GameDownload\Out
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\API\Outpost2Dialog;../../API/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>OP2MissionSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -83,6 +84,7 @@ rem copy /Y "$(ProjectDir)multitekNoLavaWalls.txt" "..\..\..\..\GameDownload\Out
       <BaseAddress>0x11000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalDependencies>OP2MissionSDK\odasl\odasl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>copy $(TargetPath) ..\..\..\..\GameDownload\Outpost2\trunk\
@@ -103,16 +105,13 @@ rem copy /Y "$(ProjectDir)multitekNoLavaWalls.txt" "..\..\..\..\GameDownload\Out
     <ClCompile Include="ScenarioHelperLibrary\VehicleCounter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\API\HFL\Source\HFL.vcxproj">
+    <ProjectReference Include="OP2MissionSDK\HFL\Source\HFL.vcxproj">
       <Project>{0fc43a25-fb89-4258-849b-cb3c0a061e0d}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\API\OP2Helper\OP2Helper.vcxproj">
+    <ProjectReference Include="OP2MissionSDK\OP2Helper\OP2Helper.vcxproj">
       <Project>{0b520c87-4cfd-4a4d-abd4-f87d26df9aad}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\API\Outpost2Dialog\Outpost2Dialog.vcxproj">
-      <Project>{aa68af24-3b46-4567-b3cf-826c5a48ae76}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\API\Outpost2DLL\Outpost2DLL.vcxproj">
+    <ProjectReference Include="OP2MissionSDK\Outpost2DLL\Outpost2DLL.vcxproj">
       <Project>{b3f40368-f3cc-4ec5-a758-f5dad08feddc}</Project>
     </ProjectReference>
   </ItemGroup>
