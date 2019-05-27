@@ -34,8 +34,6 @@ SongIds PlayList[] = {
 
 Export int InitProc()
 {
-	HFLInit();
-
 	ShowBriefing();
 
 	//GameMap::SetCellType(LOCATION(10 + X_, 128 + Y_), CellTypes::cellFastPassible1);
